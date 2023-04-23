@@ -15,7 +15,7 @@ namespace MovieTicket_project.Models
         public string ImageURL { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
-        public MovieCategory movieCategory { get; set; }
+        public MovieCategory MovieCategory { get; set; }
 
         //Relationships
         public List<ActorMovie> ActorsMovies { get; set; }
