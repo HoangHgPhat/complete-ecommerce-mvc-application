@@ -31,6 +31,6 @@ namespace MovieTicket_project.Data
         public DbSet<Producer> Producers { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<ActorMovie> ActorsMovies { get; set; }
-         
+        
     }
 }
