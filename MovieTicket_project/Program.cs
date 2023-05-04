@@ -10,7 +10,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 });
-
+//Service configuration
+//On working
 
 var app = builder.Build();
 

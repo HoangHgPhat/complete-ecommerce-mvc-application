@@ -15,5 +15,10 @@ namespace MovieTicket_project.Controllers
             var data = _context.Actors.ToList();
             return View(data);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
