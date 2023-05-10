@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MovieTicket_project.Models
 {
@@ -7,12 +8,17 @@ namespace MovieTicket_project.Models
         [Key]
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "Profile Picture is required")]
         public string ProfilePictureURL { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Full Name is required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Full Name must be between 3 and 50 chars")]
         public string FullName { get; set; }
+
+        [Required(ErrorMessage = "Biography is required")]
         public string Bio { get; set; }
 
         //Relationships
-        public List<ActorMovie> ActorsMovies { get; set; }
+        public List<ActorMovie>? ActorsMovies { get; set; }
     }
 }
